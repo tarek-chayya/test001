@@ -11,12 +11,18 @@ $(function() {
 	$( window ).resize(function() {
 		DisplayScreenWidth();
 	});
-	itsnow.html(time);
+	DisplayTime();
 	function DisplayScreenWidth(){
 		console.log("Set Screen");
 		varsw=$( window ).width();
 		wwidth.html(varsw+"px");
 		varsw=$( document ).width();
 		dwidth.append(varsw+"px ");
+	}
+	function DisplayTime(){
+		dt = new Date();
+		time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+		itsnow.html(time);
+		setTimeout(function(){ DisplayTime() }, 1000);
 	}
 });
