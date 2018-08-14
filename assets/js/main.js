@@ -1,8 +1,7 @@
 // JavaScript Document
 
-var swidth;
+var wwidth, dwidth;
 $(function() {
-  // Handler for .ready() called.
   swidth=$("#swidth");
   DisplayScreenWidth();
   $( window ).resize(function() {
@@ -10,8 +9,8 @@ $(function() {
   });
   function DisplayScreenWidth(){
 	  varsw=$( window ).width();
-	  swidth.html(varsw+"px / ");
+	  wwidth.html(varsw+"px / ");
 	  varsw=$( document ).width();
-	  swidth.append(varsw+"px ");
+	  dwidth.append(varsw+"px ");
   }
 });
