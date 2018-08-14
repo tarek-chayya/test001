@@ -1,3 +1,6 @@
 // JavaScript Document
 
-alert('hi');
+$(function() {
+  // Handler for .ready() called.
+  console.log("page is ready");
+});
